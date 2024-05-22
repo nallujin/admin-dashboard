@@ -209,7 +209,6 @@ article {
   padding: 40px 20px
 }
 
-.projects,
 .announcements,
 .trending {
   border: dashed #000 1px;
@@ -220,6 +219,14 @@ article {
   grid-row: 1/3;
   display: grid;
   grid-template-rows: auto 1fr;
+}
+
+.projects>p,
+.announcements>p,
+.trending>p {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 20px;
 }
 
 .card-container {
@@ -243,6 +250,7 @@ article {
   background-color: #f0b429;
   height: 100%;
   width: 10px;
+  flex-shrink: 0;
 }
 
 .contents {
@@ -250,6 +258,7 @@ article {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  row-gap: 5px;
 }
 
 .title {
