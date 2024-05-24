@@ -106,7 +106,7 @@ header {
 .texts>p:nth-child(2){
   font-size: 24px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .self-profile p {
@@ -209,10 +209,9 @@ article {
   padding: 40px 20px
 }
 
-.announcements,
-.trending {
-  border: dashed #000 1px;
-}
+/*.trending {*/
+/*  border: dashed #000 1px;*/
+/*}*/
 
 .projects {
   grid-column: 1/2;
@@ -282,9 +281,93 @@ article {
 .announcements {
   grid-column: 2/3;
   grid-row: 1/2;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.announcements>p {
+  flex-shrink: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.ann-content {
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  padding: 20px;
+  row-gap: 20px;
+}
+
+.ann-tab {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.tab-title {
+  font-weight: bold;
+}
+
+.tab-desc {
+  color: #646464;
+}
+
+.separator {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  justify-self: center;
 }
 
 .trending {
   grid-column: 2/3;
   grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending>p {
+  flex-shrink: 0;
+}
+
+.trend-tab {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  padding: 20px;
+  row-gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profiles {
+  display: flex;
+  column-gap: 10px;
+}
+
+.photo-trend {
+  height: 50px;
+}
+
+.photo-trend>img {
+  height: 100%;
+  border-radius: 100%;
+}
+
+.trend-info {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+.tag-name {
+  font-weight: bold;
+}
+
+.trend-bio {
+  color: #808080;
 }
